@@ -40,7 +40,7 @@ Do you want to continue? [Y/n] y
 make a dir named my-site in /var/www/ : mkdir /var/www/my-site
 Create a html file in /var/www/my-site and add simple html file: vim /var/www/my-site/index.html
 my example:
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -62,7 +62,7 @@ my example:
 <body>
     <h1>Hello, World</h1>
 </body>
-</html>
+</html> -->
 
 Go to /etc/nginx/sites-available
 
@@ -70,7 +70,7 @@ Delete the defult:rm default
 
 Create my-site.conf, vim my-site.conf and adding the following
 Note: Your path need to point to the index.heml file. In here, my path is /var/www/my-site
-#server {
+<!-- #server {
 #	listen 80;
 #	listen [::]:80;
 #
@@ -82,7 +82,7 @@ Note: Your path need to point to the index.heml file. In here, my path is /var/w
 #	location / {
 #		try_files $uri $uri/ =404;
 #	}
-#}
+#} -->
 
 Next, we need creat a symbolic link and in /etc/nginx/sites-enabled: 
 ln -s /etc/nginx/sites-available/my-site.conf /etc/nginx/sites-enabled/
